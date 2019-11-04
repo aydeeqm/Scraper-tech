@@ -1,0 +1,14 @@
+extends layout
+
+block content
+
+  h1 #{section}!
+  
+  h3 Categories
+  div
+    each item in products
+      div
+        figure
+          img(src=`${item.image}`, alt="tech")
+        p= item.description
+        p= item.price
